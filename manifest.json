@@ -1,0 +1,64 @@
+{
+  "manifest_version": 3,
+  "version": "1.0",
+  "name": "LinkSnake",
+  "description": "Removes tracking parameters from links",
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "icons": {
+    "16": "icons/LS16.png",
+    "48": "icons/LS48.png",
+    "128": "icons/LS128.png"
+  },
+  "permissions": [
+    "tabs",
+    "scripting",
+    "storage",
+    "webNavigation",
+    "downloads",
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess",
+    "notifications"
+  ],
+  "background": {
+    "service_worker": "src/background/background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "src/utils/download-interceptor.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "data/patterns.json",
+        "data/tranco-top50k.json"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": "icons/icon.png"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "data/parameter-rules.json"
+      }
+    ]
+  }
+}

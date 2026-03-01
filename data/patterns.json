@@ -1,0 +1,817 @@
+{
+  "tlds": {
+    "tld_risk_profiles": {
+      "critical_risk": [
+        ".rest",
+        ".monster",
+        ".tk",
+        ".ml",
+        ".ga",
+        ".cf",
+        ".fit",
+        ".kim",
+        ".click",
+        ".sbs",
+        ".cyou",
+        ".cfd",
+        ".gdn",
+        ".icu",
+        ".bond",
+        ".pw",
+        ".buzz",
+        ".hair",
+        ".beauty",
+        ".boats",
+        ".homes",
+        ".cam",
+        ".surf",
+        ".lol",
+        ".wtf",
+        ".ninja",
+        ".exposed",
+        ".vip",
+        ".wang",
+        ".xin",
+        ".desi",
+        ".uno",
+        ".bar",
+        ".bid",
+        ".faith",
+        ".webcam",
+        ".accountant",
+        ".science",
+        ".men",
+        ".trade",
+        ".party"
+      ],
+      "risk": [
+        ".zip",
+        ".mov",
+        ".foo",
+        ".party",
+        ".racing",
+        ".win",
+        ".date",
+        ".review",
+        ".stream",
+        ".download",
+        ".loan",
+        ".cricket",
+        ".gq",
+        ".trade",
+        ".faith",
+        ".accountant",
+        ".webcam",
+        ".men",
+        ".science"
+      ],
+      "suspicious": [
+        ".xyz",
+        ".top",
+        ".site",
+        ".online",
+        ".live",
+        ".shop",
+        ".info",
+        ".club",
+        ".work",
+        ".space",
+        ".fun",
+        ".icu",
+        ".pro",
+        ".digital",
+        ".network",
+        ".tech",
+        ".link",
+        ".world",
+        ".media",
+        ".services",
+        ".solutions",
+        ".agency",
+        ".systems",
+        ".today",
+        ".email",
+        ".website",
+        ".store",
+        ".host",
+        ".app",
+        ".dev",
+        ".page",
+        ".run",
+        ".codes",
+        ".tools",
+        ".direct",
+        ".center",
+        ".company",
+        ".expert",
+        ".group",
+        ".team"
+      ],
+      "grey_area": [
+        ".cc",
+        ".to",
+        ".tv",
+        ".cn",
+        ".ru",
+        ".su",
+        ".biz",
+        ".name",
+        ".io",
+        ".me",
+        ".fm",
+        ".am",
+        ".so",
+        ".ac",
+        ".sh",
+        ".ms"
+      ]
+    }
+  },
+  "fileExtensions": {
+    "executable": {
+      "windows": [
+        ".exe",
+        ".msi",
+        ".bat",
+        ".cmd",
+        ".ps1",
+        ".ps2",
+        ".vbs",
+        ".vbe",
+        ".scr",
+        ".reg",
+        ".com",
+        ".pif",
+        ".hta",
+        ".cpl",
+        ".msc",
+        ".lnk",
+        ".ws",
+        ".wsc",
+        ".wsf",
+        ".inf",
+        ".gadget",
+        ".msp",
+        ".mst",
+        ".job",
+        ".url"
+      ],
+      "unix": [
+        ".sh",
+        ".bash",
+        ".zsh",
+        ".run",
+        ".bin",
+        ".app",
+        ".elf",
+        ".ko",
+        ".command"
+      ],
+      "crossPlatform": [
+        ".jar",
+        ".apk",
+        ".dmg",
+        ".pkg",
+        ".deb",
+        ".rpm",
+        ".appimage"
+      ]
+    },
+    "macro": [
+      ".docm",
+      ".xlsm",
+      ".pptm",
+      ".ppam",
+      ".xltm",
+      ".dotm",
+      ".xlam",
+      ".sldm"
+    ],
+    "archive": [
+      ".zip",
+      ".rar",
+      ".7z",
+      ".iso",
+      ".img",
+      ".cab",
+      ".tar",
+      ".gz",
+      ".tgz",
+      ".bz2",
+      ".xz",
+      ".lzh",
+      ".ace",
+      ".udf",
+      ".wim"
+    ],
+    "script": [
+      ".py",
+      ".php",
+      ".asp",
+      ".aspx",
+      ".jsp",
+      ".js",
+      ".rb",
+      ".pl",
+      ".lua",
+      ".tcl",
+      ".class",
+      ".ps1",
+      ".ps2",
+      ".vbs",
+      ".vbe",
+      ".wsf",
+      ".wsc",
+      ".hta",
+      ".pyc"
+    ],
+    "doubleExtensionPatterns": [
+      ".pdf.exe",
+      ".jpg.exe",
+      ".png.exe",
+      ".doc.exe",
+      ".txt.exe",
+      ".zip.exe",
+      ".docx.exe",
+      ".xlsx.exe",
+      ".pdf.js",
+      ".jpg.scr",
+      ".png.bat",
+      ".doc.cmd",
+      ".txt.bat",
+      ".mp4.exe",
+      ".mp3.exe",
+      ".avi.exe",
+      ".pdf.bat",
+      ".pdf.cmd",
+      ".pdf.scr",
+      ".jpg.bat",
+      ".jpg.cmd",
+      ".docx.scr",
+      ".docx.bat",
+      ".pdf.vbs",
+      ".jpg.vbs",
+      ".png.vbs",
+      ".doc.vbs",
+      ".docx.vbs",
+      ".txt.vbs",
+      ".mp4.vbs",
+      ".mp3.vbs",
+      ".xlsx.vbs",
+      ".zip.vbs",
+      ".pdf.vbe",
+      ".jpg.vbe",
+      ".png.vbe",
+      ".doc.vbe",
+      ".docx.vbe",
+      ".txt.vbe",
+      ".mp4.vbe",
+      ".mp3.vbe",
+      ".xlsx.vbe",
+      ".zip.vbe",
+      ".pdf.ps1",
+      ".jpg.ps1",
+      ".png.ps1",
+      ".doc.ps1",
+      ".docx.ps1",
+      ".txt.ps1",
+      ".mp4.ps1",
+      ".mp3.ps1",
+      ".xlsx.ps1",
+      ".zip.ps1",
+      ".pdf.hta",
+      ".jpg.hta",
+      ".png.hta",
+      ".doc.hta",
+      ".docx.hta",
+      ".txt.hta",
+      ".mp4.hta",
+      ".mp3.hta",
+      ".xlsx.hta",
+      ".zip.hta",
+      ".pdf.lnk",
+      ".jpg.lnk",
+      ".png.lnk",
+      ".doc.lnk",
+      ".docx.lnk",
+      ".txt.lnk",
+      ".mp4.lnk",
+      ".mp3.lnk",
+      ".xlsx.lnk",
+      ".zip.lnk",
+      ".pdf.msi",
+      ".jpg.msi",
+      ".png.msi",
+      ".doc.msi",
+      ".docx.msi",
+      ".txt.msi",
+      ".mp4.msi",
+      ".mp3.msi",
+      ".xlsx.msi",
+      ".zip.msi",
+      ".pdf.reg",
+      ".jpg.reg",
+      ".png.reg",
+      ".doc.reg",
+      ".docx.reg",
+      ".txt.reg",
+      ".mp4.reg",
+      ".mp3.reg",
+      ".xlsx.reg",
+      ".zip.reg",
+      ".pdf.wsf",
+      ".jpg.wsf",
+      ".png.wsf",
+      ".doc.wsf",
+      ".docx.wsf",
+      ".txt.wsf",
+      ".mp4.wsf",
+      ".mp3.wsf",
+      ".xlsx.wsf",
+      ".zip.wsf",
+      ".pdf.pif",
+      ".jpg.pif",
+      ".png.pif",
+      ".doc.pif",
+      ".docx.pif",
+      ".txt.pif",
+      ".mp4.pif",
+      ".mp3.pif",
+      ".xlsx.pif",
+      ".zip.pif"
+    ]
+  },
+  "fileSignatures": {
+    "description": "Magic number signatures for file type verification",
+    "signatures": {
+      "4D5A": {
+        "type": "exe",
+        "description": "DOS/Windows PE executable (MZ header)",
+        "offset": 0
+      },
+      "504B0304": {
+        "type": "zip",
+        "description": "ZIP archive (also DOCX/XLSX/PPTX/JAR/APK/ODF)",
+        "offset": 0
+      },
+      "25504446": {
+        "type": "pdf",
+        "description": "PDF document",
+        "offset": 0
+      },
+      "FFD8FFE0": {
+        "type": "jpeg",
+        "description": "JPEG/JFIF image",
+        "offset": 0
+      },
+      "FFD8FFE1": {
+        "type": "jpeg",
+        "description": "JPEG/EXIF image",
+        "offset": 0
+      },
+      "FFD8FFE2": {
+        "type": "jpeg",
+        "description": "JPEG/Canon CIFF image",
+        "offset": 0
+      },
+      "FFD8FFDB": {
+        "type": "jpeg",
+        "description": "JPEG raw image",
+        "offset": 0
+      },
+      "89504E47": {
+        "type": "png",
+        "description": "PNG image",
+        "offset": 0
+      },
+      "47494638": {
+        "type": "gif",
+        "description": "GIF image",
+        "offset": 0
+      },
+      "52494646": {
+        "type": "riff",
+        "description": "RIFF container (WebP/AVI/WAV)",
+        "offset": 0
+      },
+      "52617221": {
+        "type": "rar",
+        "description": "RAR archive v4",
+        "offset": 0
+      },
+      "526172211A0700": {
+        "type": "rar",
+        "description": "RAR archive v5",
+        "offset": 0
+      },
+      "377ABCAF271C": {
+        "type": "7z",
+        "description": "7-Zip archive",
+        "offset": 0
+      },
+      "D0CF11E0A1B11AE1": {
+        "type": "ole",
+        "description": "MS Office legacy / OLE2 compound (DOC/XLS/PPT/MSI/MSG)",
+        "offset": 0
+      },
+      "7F454C46": {
+        "type": "elf",
+        "description": "ELF executable (Linux/Android)",
+        "offset": 0
+      },
+      "FEEDFACE": {
+        "type": "macho",
+        "description": "Mach-O 32-bit executable (macOS/iOS)",
+        "offset": 0
+      },
+      "FEEDFACF": {
+        "type": "macho",
+        "description": "Mach-O 64-bit executable (macOS/iOS)",
+        "offset": 0
+      },
+      "CEFAEDFE": {
+        "type": "macho",
+        "description": "Mach-O 32-bit reversed byte order",
+        "offset": 0
+      },
+      "CFFAEDFE": {
+        "type": "macho",
+        "description": "Mach-O 64-bit reversed byte order",
+        "offset": 0
+      },
+      "CAFEBABE": {
+        "type": "class",
+        "description": "Java .class bytecode / Mach-O fat binary",
+        "offset": 0
+      },
+      "4C000000": {
+        "type": "lnk",
+        "description": "Windows LNK shortcut — frequently used in malware delivery",
+        "offset": 0
+      },
+      "7B5C7274": {
+        "type": "rtf",
+        "description": "Rich Text Format — can embed malicious OLE objects",
+        "offset": 0
+      },
+      "4D534346": {
+        "type": "cab",
+        "description": "Microsoft Cabinet archive",
+        "offset": 0
+      },
+      "1F8B08": {
+        "type": "gz",
+        "description": "GZIP compressed archive",
+        "offset": 0
+      },
+      "425A68": {
+        "type": "bz2",
+        "description": "BZIP2 compressed archive",
+        "offset": 0
+      },
+      "FD377A585A00": {
+        "type": "xz",
+        "description": "XZ compressed archive",
+        "offset": 0
+      },
+      "3C3F786D6C": {
+        "type": "xml",
+        "description": "XML document (<?xml)",
+        "offset": 0
+      },
+      "3C68746D6C": {
+        "type": "html",
+        "description": "HTML document — watch for HTA masquerading",
+        "offset": 0
+      },
+      "3C48544D4C": {
+        "type": "html",
+        "description": "HTML document (uppercase)",
+        "offset": 0
+      },
+      "213C617263683E": {
+        "type": "deb",
+        "description": "Debian package",
+        "offset": 0
+      },
+      "4558450A": {
+        "type": "exe",
+        "description": "Android ART compiled executable",
+        "offset": 0
+      },
+      "EDABEEDB": {
+        "type": "rpm",
+        "description": "RPM package — Linux installer",
+        "offset": 0
+      },
+      "4D5357494D000000": {
+        "type": "wim",
+        "description": "Windows Imaging Format (WIM) — used in Windows deployment, abused in dropper chains",
+        "offset": 0
+      },
+      "49536328": {
+        "type": "cab",
+        "description": "InstallShield CAB archive",
+        "offset": 0
+      },
+      "4C5A4950": {
+        "type": "lzip",
+        "description": "LZIP compressed archive",
+        "offset": 0
+      },
+      "04224D18": {
+        "type": "lz4",
+        "description": "LZ4 compressed archive",
+        "offset": 0
+      },
+      "28B52FFD": {
+        "type": "zst",
+        "description": "Zstandard compressed archive",
+        "offset": 0
+      },
+      "CAFED00D": {
+        "type": "jar",
+        "description": "Java multi-release JAR (Pack200 compressed)",
+        "offset": 0
+      },
+      "2321": {
+        "type": "script",
+        "description": "Unix shebang (#!) — shell/Python/Ruby/Perl script",
+        "offset": 0
+      },
+      "0D444F43": {
+        "type": "doc",
+        "description": "Microsoft Word 2003 XML (.doc)",
+        "offset": 0
+      },
+      "7B5C727466": {
+        "type": "rtf",
+        "description": "Rich Text Format — can embed malicious OLE objects (alternate header)",
+        "offset": 0
+      },
+      "636F6E6563746978": {
+        "type": "vmdk",
+        "description": "VMware virtual disk — can contain full filesystem with malware",
+        "offset": 0
+      },
+      "4B444D": {
+        "type": "vmdk",
+        "description": "VMware VMDK sparse extent",
+        "offset": 0
+      },
+      "3C3C3C2051454D55": {
+        "type": "qcow",
+        "description": "QEMU disk image — virtual machine disk",
+        "offset": 0
+      },
+      "514649FB": {
+        "type": "qcow",
+        "description": "QCOW2 virtual disk image",
+        "offset": 0
+      },
+      "4F54544F": {
+        "type": "otf",
+        "description": "OpenType font (CFF) — font exploits have been used in drive-by attacks",
+        "offset": 0
+      },
+      "00010000": {
+        "type": "ttf",
+        "description": "TrueType font — font exploits have been used in drive-by attacks",
+        "offset": 0
+      },
+      "53514C69746520666F726D6174203300": {
+        "type": "sqlite",
+        "description": "SQLite database — may contain credentials or sensitive application data",
+        "offset": 0
+      },
+      "D4C3B2A1": {
+        "type": "pcap",
+        "description": "Wireshark/tcpdump capture file",
+        "offset": 0
+      },
+      "0A0D0D0A": {
+        "type": "pcapng",
+        "description": "Wireshark pcapng capture file",
+        "offset": 0
+      },
+      "435753": {
+        "type": "swf",
+        "description": "Adobe Flash SWF (compressed) — legacy but heavily exploited format",
+        "offset": 0
+      },
+      "465753": {
+        "type": "swf",
+        "description": "Adobe Flash SWF (uncompressed) — legacy but heavily exploited format",
+        "offset": 0
+      },
+      "6F0D0D0A": {
+        "type": "pyc",
+        "description": "Compiled Python bytecode (.pyc) — executes like a script",
+        "offset": 0
+      }
+    }
+  },
+  "urlShorteners": {
+    "url_short": [
+      "bit.ly",
+      "tinyurl.com",
+      "is.gd",
+      "bit.do",
+      "tiny.cc",
+      "shorte.st",
+      "cutt.ly",
+      "ow.ly",
+      "buff.ly",
+      "ift.tt",
+      "dlvr.it",
+      "rb.gy",
+      "short.io",
+      "soo.gd",
+      "clck.ru",
+      "bl.ink",
+      "snip.ly",
+      "t.co",
+      "goo.gl",
+      "shorturl.at",
+      "urlzs.com",
+      "1url.com",
+      "2tu.us",
+      "clika.me",
+      "vzturl.com",
+      "rebrand.ly",
+      "tiny.ie",
+      "s.id",
+      "hubs.ly",
+      "trib.al",
+      "lnk.to"
+    ],
+    "highRisk": [
+      "t.ly",
+      "goo.su",
+      "v.gd",
+      "linkvertise.com",
+      "adf.ly",
+      "ouo.io",
+      "pdisk.net",
+      "mediafire.com/file",
+      "shrink.pe",
+      "bc.vc",
+      "sh.st",
+      "za.gl",
+      "fc.lc",
+      "al.ly",
+      "clk.sh",
+      "exe.io",
+      "gplinks.in",
+      "shrinkearn.com",
+      "urlpay.net",
+      "sub2unlock.com",
+      "sub4unlock.com",
+      "sub2get.com",
+      "link-to.net",
+      "mega.nz/#!",
+      "discord.gift",
+      "steamcommunity.com/tradeoffer",
+      "file.io",
+      "transfer.sh",
+      "gofile.io",
+      "anonfiles.com",
+      "bayfiles.com"
+    ]
+  },
+  "pathRules": [
+    {
+      "category": "Path Traversal",
+      "pattern": "(\\.\\.\\/|\\.\\.\\\\|%2e%2e%2f|%2e%2e%5c|%2e%2e/|\\.\\.%2f|\\.\\.%5c)",
+      "type": "regex",
+      "severity": "critical",
+      "note": "Attempt to access files outside the intended web directory."
+    },
+    {
+      "category": "Sensitive Config/Secrets",
+      "pattern": "(/\\.env(\\.local|\\.prod|\\.dev)?|/config\\.(php|json|yml|yaml)|/web\\.config|/settings\\.(json|py)|/\\.git/|/\\.ssh/|/phpinfo\\.php|/wp-config\\.php|/database\\.yml|/credentials)$",
+      "type": "regex",
+      "severity": "critical",
+      "note": "Targeting server secrets, credentials, or environment variables."
+    },
+    {
+      "category": "Web Shells/Backdoors",
+      "pattern": "/(c99|r57|b374k|webshell|cmd|shell|WSO|indoxploit|wso2|alfa|FilesMan)\\.(php|jsp|aspx|asp|cfm)$",
+      "type": "regex",
+      "severity": "critical",
+      "note": "Common names for uploaded attacker-controlled remote shell scripts."
+    },
+    {
+      "category": "Social Engineering Keywords",
+      "pattern": "/(update|patch|hotfix|invoice|billing|receipt|overdue|refund|payment|verification|security.?check|account.?suspended|confirm.?identity|urgent)/",
+      "type": "regex",
+      "severity": "medium",
+      "note": "Urgency/authority keywords commonly used in phishing and malware delivery."
+    },
+    {
+      "category": "Cloud Storage Direct Download Bypass",
+      "pattern": "/(export=download|/uc\\?|/open\\?|confirm=t|view=download|action=direct)",
+      "type": "regex",
+      "severity": "high",
+      "note": "URL patterns used to bypass Google Drive/Dropbox AV warning screens and force direct download."
+    },
+    {
+      "category": "Suspicious Directory Patterns",
+      "pattern": "/(wp-content/uploads/|/tmp/|/temp/|/pub/|/cache/|/uploads/|/files/|/attach/|/attachment/)",
+      "type": "regex",
+      "severity": "medium",
+      "note": "Directories frequently used to host malware on compromised or poorly configured sites."
+    },
+    {
+      "category": "URL Obfuscation / Encoding",
+      "pattern": "(%[0-9a-fA-F]{2}){5,}|(%25){2,}|(%00)|(%0[aAdD])",
+      "type": "regex",
+      "severity": "high",
+      "note": "Excessive or suspicious URL encoding used to obscure malicious destinations or bypass filters."
+    },
+    {
+      "category": "IP Address URL",
+      "pattern": "^/?(\\d{1,3}\\.){3}\\d{1,3}(:\\d+)?/",
+      "type": "regex",
+      "severity": "medium",
+      "note": "Legitimate software is rarely delivered from a bare IP address. Common in malware C2 and exploit kits."
+    },
+    {
+      "category": "Suspicious Archive with Executable Inside (Path hint)",
+      "pattern": "/[^/]+\\.(zip|rar|7z|cab|iso|gz|tar\\.gz|tgz)/",
+      "type": "regex",
+      "severity": "low",
+      "note": "Archive files served inline in a URL path — note for combined scoring, not blocking alone."
+    },
+    {
+      "category": "Command Injection",
+      "pattern": "(;|\\||`|\\$\\(|&&|\\|\\|)\\s*(cat|ls|id|whoami|uname|wget|curl|bash|sh|python|perl|ruby|nc|netcat|ncat|chmod|chown|rm\\s+-rf|/etc/passwd|/etc/shadow)",
+      "type": "regex",
+      "severity": "critical",
+      "note": "Shell command injection patterns in URL — attempt to execute OS commands via web input."
+    },
+    {
+      "category": "PHP Code Execution",
+      "pattern": "(\\?|&)(cmd|exec|command|shell|system|passthru|eval|assert)=|eval\\(base64_decode\\(|system\\(|passthru\\(|shell_exec\\(",
+      "type": "regex",
+      "severity": "critical",
+      "note": "PHP remote code execution parameters or function calls embedded in URL."
+    },
+    {
+      "category": "Admin Panel Access",
+      "pattern": "/(admin|administrator|wp-admin|phpmyadmin|adminer|cpanel|webmin|plesk|directadmin|manager|backend|controlpanel|adminpanel|wp-login\\.php)(/|$|\\?)",
+      "type": "regex",
+      "severity": "high",
+      "note": "Access to administrative interfaces — high-value targets for credential stuffing and RCE."
+    },
+    {
+      "category": "Known Exploit / CVE Paths",
+      "pattern": "/(solr/admin|actuator/|console/login\\.jspa|wp-includes/ms-files\\.php|vendor/phpunit|eval-stdin\\.php|_fragment\\?|xmlrpc\\.php|joomla/administrator|sites/default/files|cgi-bin/(test-cgi|php\\.cgi)|showLogin\\.cc|tmUnblock\\.cgi)",
+      "type": "regex",
+      "severity": "critical",
+      "note": "Paths associated with specific known CVEs and widely exploited CMS/framework vulnerabilities."
+    },
+    {
+      "category": "SSRF / Internal Network Probe",
+      "pattern": "(localhost|127\\.0\\.0\\.1|0\\.0\\.0\\.0|169\\.254\\.|10\\.\\d+\\.\\d+\\.\\d+|192\\.168\\.|172\\.(1[6-9]|2\\d|3[01])\\.|::1|\\[::1\\]|file://|gopher://|dict://|ftp://.*@)",
+      "type": "regex",
+      "severity": "high",
+      "note": "Server-Side Request Forgery indicators — probing internal network or localhost services."
+    },
+    {
+      "category": "SQL Injection Probe",
+      "pattern": "('|%27|--|%2D%2D|/\\*|\\*/|xp_cmdshell|UNION(%20|\\+|%09)SELECT|SELECT(%20|\\+|%09).+FROM|INSERT(%20|\\+)INTO|DROP(%20|\\+)TABLE|OR(%20|\\+)1=1|AND(%20|\\+)1=1)",
+      "type": "regex",
+      "severity": "high",
+      "note": "SQL injection payloads in URL — attempt to manipulate backend database queries."
+    },
+    {
+      "category": "Log4Shell / Template Injection",
+      "pattern": "(\\$\\{jndi:|\\$\\{\\$\\{|\\$\\{lower:|\\$\\{upper:|\\$\\{::-|\\#\\{|\\{\\{.*\\}\\}|<%=|<\\?=|\\{%|%7B%7B)",
+      "type": "regex",
+      "severity": "critical",
+      "note": "Log4Shell (CVE-2021-44228) JNDI injection and generic template injection patterns."
+    },
+    {
+      "category": "Cryptocurrency / Dropper Keywords",
+      "pattern": "/(miner|mining|cryptominer|xmrig|monero|coinhive|coinimp|minexmr|claymore|nicehash|minergate|ethminer)(/|\\.|_|-|$)",
+      "type": "regex",
+      "severity": "high",
+      "note": "Paths associated with cryptomining malware distribution or C2 endpoints."
+    },
+    {
+      "category": "Credential / Token Leak in URL",
+      "pattern": "(password|passwd|pwd|secret|api[_-]?key|token|auth[_-]?token|access[_-]?token|bearer|private[_-]?key)=[^&]{4,}",
+      "type": "regex",
+      "severity": "high",
+      "note": "Credentials or tokens passed in URL query string — leaked in logs, referrer headers, and browser history."
+    },
+    {
+      "category": "Malware Family Paths",
+      "pattern": "/(gate\\.php|panel\\.php|bot\\.php|loader\\.php|payload\\.php|drop\\.php|inject\\.php|zeus|spyeye|citadel|emotet|trickbot|cobalt.?strike|meterpreter|beacon)(/|$|\\?|\\.)",
+      "type": "regex",
+      "severity": "critical",
+      "note": "URL paths matching known malware family C2 endpoints and payload delivery scripts."
+    }
+  ]
+}

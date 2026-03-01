@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <div class="top-segment">
+        <div class="header"><span>Линк Снейк</span><button id="close-btn" class="close-x">&times;</button></div>
+        <div class="stat-grid">
+            <div class="stat-card">
+                <span>Почистени URLs</span>
+                <div class="stat-card-num" id="cleanedUrlsNum">0</div>
+            </div>
+            <div class="stat-card">
+                <span>Засекани файлове</span>
+                <div class="stat-card-num" id="blockedFilesNum">0</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="options">
+        <div id="segment-control">
+            <button class="segment-btn active" data-tab="this-site">Статистики</button>
+            <button class="segment-btn" data-tab="settings">Настройки</button>
+        </div>
+
+        <div id="this-site" class="tab-content">
+            <div class="statistics-part">
+                <div class="statistics-title">URL Статистики</div>
+                <div class="cleaned-url-visual-proces">
+                    <h3>Почистен URL</h3>
+                    <p>Преди:</p>
+                    <div class="uncleaned-url"></div>
+                    <div class="scissors-circle">
+                        <img src="/icons/scissors.svg" width="20" height="20">
+                    </div>
+                    <p>След:</p>
+                    <div class="cleaned-url"></div>
+                </div>
+
+                <div class="redirecting-stopt">
+                    <div>
+                        <span class="redirecting-title">Блокирани пренасочвания</span>
+                    </div>
+                    <div class="redirecting-num-badge" id="redirectsBadge">0</div>
+                </div>
+            </div>
+
+            <div class="statistics-part">
+                <div class="statistics-title">Последен блокиран файл</div>
+
+                <div class="file-incident-card" id="lastBlockedCard">
+                    <div id="fileEmptyState" class="file-empty-state">
+                        <span class="empty-icon">🛡️</span>
+                        <span>Няма блокирани файлове</span>
+                    </div>
+
+                    <div class="file-header-strip" id="fileHeaderStrip">
+                        <span class="file-name-text" id="fileName">—</span>
+                        <span class="file-risk-badge" id="riskScore">Риск: —</span>
+                    </div>
+
+                    <table class="file-info-table" id="fileInfoTable">
+                        <tr>
+                            <td class="file-info-label">Произход</td>
+                            <td class="file-info-value mono" id="fileOrigin">—</td>
+                        </tr>
+                        <tr>
+                            <td class="file-info-label">Тип файл</td>
+                            <td class="file-info-value" id="fileType">—</td>
+                        </tr>
+                        <tr>
+                            <td class="file-info-label">Размер</td>
+                            <td class="file-info-value" id="fileSize">—</td>
+                        </tr>
+                        <tr class="entropy-row">
+                            <td class="file-info-label">Ентропия</td>
+                            <td class="file-info-value">
+                                <div class="entropy-bar-wrap">
+                                    <span class="entropy-value-text" id="entropyValue">0.0</span>
+                                    <div class="entropy-bar-container">
+                                        <div class="entropy-bar-fill" id="entropyBar" style="width: 0%"></div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="file-reasons-section" id="fileReasonsSection" style="display:none;">
+                        <div class="file-reasons-title">Причини за блокиране</div>
+                        <div class="reasons-tags" id="blockReasons"></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div id="settings" class="tab-content" style="display:none;">
+            <div class="settings-box">
+                <h4>Основни функции</h4>
+                <div class="settings-list">
+                    <div class="setting-item">
+                        <span class="setting-label">Премахване на параметри</span>
+                        <label class="switch">
+                            <input type="checkbox" class="settings-toggle" data-save="parameter-removal">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <hr>
+                    <div class="setting-item">
+                        <span class="setting-label">Блокиране на пренасочвания</span>
+                        <label class="switch">
+                            <input type="checkbox" class="settings-toggle" data-save="stop-url-redirecting">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <hr>
+                    <div class="setting-item">
+                        <span class="setting-label">Проверка на файлове</span>
+                        <label class="switch">
+                            <input type="checkbox" class="settings-toggle" data-save="file-scanning">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="settings-box">
+                <div class="settings-list">
+                    <div class="setting-item">
+                        Изключи текущия сайт
+                        <button id="whitelist-btn">Добави</button>
+                    </div>
+                    <div id="whitelist-list"></div>
+                </div>
+            </div>
+            <div class="settings-box">
+                <div class="setting-item">
+                    <span class="setting-label">Нотификации</span>
+                    <label class="switch">
+                        <input type="checkbox" class="settings-toggle" data-save="notifications">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
