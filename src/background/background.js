@@ -5,7 +5,6 @@ import { checkUrl, checkHash } from "../utils/api-client.js"
 import { checkMagicNumber } from "../utils/magicnumber-checker.js"
 import { calculateHash, calculateEntropy } from "../utils/file-hash-worker.js"
 
-const downloads = new Map()
 const navigationTracker = {};
 let patterns = null;
 let trancoTable = null;
@@ -13,7 +12,7 @@ let trancoTable = null;
 let cachedSettings = {};
 let cachedUserWhitelist = [];
 const cancelledDownloads = new Set()
-
+chrome.downloads.onErased.addListener(id => cancelledDownloads.delete(id))
 const stats = {
     scanned: 0,
     blocked: 0,
@@ -36,7 +35,7 @@ async function initialize() {
     console.log('[Init] Ready')
 }
 let initPromise = null
-
+ 
 function ensureInitialized() {
     if (!initPromise) {
         initPromise = initialize().catch(err => {
@@ -308,35 +307,6 @@ chrome.webNavigation.onBeforeNavigate.addListener(async (details) => {
         }
     }
     navigationTracker[details.tabId] = url
-})
-
-chrome.webNavigation.onCommitted.addListener(async (details) => {
-    if (details.frameId !== 0) return
-    const url = details.url
-    const originalUrl = navigationTracker[details.tabId]
-
-    if (url.startsWith("chrome://") || url.startsWith("chrome-extension://") ||
-        url.startsWith("devtools://") || url.startsWith("about:")) return
-    if (isWhiteListed(url)) {
-        delete navigationTracker[details.tabId]
-        return
-    }
-
-    const settings = getSettings()
-    if (settings['parameter-removal']) {
-        if (originalUrl && originalUrl !== url) {
-            let hadParams = false
-            try { hadParams = new URL(originalUrl).searchParams.toString().length > 0 } catch { }
-            if (hadParams) {
-                await incrementCounter('totalUrlsCleaned')
-                chrome.storage.local.set({
-                    [`stats_${details.tabId}`]: { before: originalUrl, after: url, timestamp: Date.now() }
-                })
-            }
-        }
-    }
-
-    delete navigationTracker[details.tabId]
 })
 
 chrome.webNavigation.onCommitted.addListener(async (details) => {
@@ -839,7 +809,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
     console.log(`[Deep Scan] Blob scan starting for: "${filename}"`)
 
-    analyseBuffer(arrayBuffer, filename, extension).then(result => {
+    analyseBuffer(arrayBuffer, extension).then(result => {
         if (result.block) {
             console.warn(`[Deep Scan] Blob BLOCKED: "${filename}" — ${result.reason}`)
 

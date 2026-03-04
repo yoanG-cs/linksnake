@@ -227,7 +227,7 @@ body::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 4px; }
 .uncleaned-url,
 .cleaned-url {
     border-radius: 12px;
-    padding: 7px 9px;
+    padding: 5.3px 9px;
     font-size: 12px;
     font-family: 'SF Mono', 'Fira Code', monospace;
     word-break: break-all;
